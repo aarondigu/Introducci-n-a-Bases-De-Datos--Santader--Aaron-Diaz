@@ -17,8 +17,8 @@
 }
 
 {
+{
  filter: {
-  house_rules: RegExp('(no smoking)|(no parties)', i)
+  house_rules: RegExp('(no smoking.*no parties)|(no parties.*no smoking)', i)
  }
 }
-
