@@ -1,0 +1,9 @@
+[{$match: {
+  amenities: {$in: [/wi-?fi/i, /ethernet/i, /internet/i]}
+
+}}, {$group: {
+  _id: null,
+  total_pub: {
+    $sum: 1
+  }
+}}]
