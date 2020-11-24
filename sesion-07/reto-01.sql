@@ -13,10 +13,12 @@ CREATE TABLE IF NOT EXISTS movies (
 );
 
 # Tabla ratings
-
+DROP TABLE IF EXISTS ratings;
 CREATE TABLE IF NOT EXISTS ratings (
 	user_id INT,
     movie_id INT,
     rating INT,
-    time_stamp BIGINT
+    time_stamp BIGINT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (movie_id) REFERENCES movies(id)
 );
